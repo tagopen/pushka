@@ -1,0 +1,79 @@
+.purpose
+  .container
+    .row
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-lg-8.col-lg-offset-2
+        .heading.purpose__heading!=content.index.purpose.heading
+      .col-xs-12
+        //- script(src="https://www.youtube.com/iframe_api")
+        .purpose__video
+          iframe( src="https://www.youtube.com/embed/Rr8ljRgcJNM?autoplay=1&ecver=0&controls=0&iv_load_policy=3&mute=1&loop=1&playlist=Rr8ljRgcJNM&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen)
+          .purpose__overlay
+          //- script.
+          //-   // 2. This code loads the IFrame Player API code asynchronously.
+          //-   var tag = document.createElement('script');
+          //-   var player, iframe;
+          //-   var $ = document.querySelector.bind(document);
+          //-   tag.src = "https://www.youtube.com/iframe_api";
+          //-   var firstScriptTag = document.getElementsByTagName('script')[0];
+          //-   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          //-   function onYouTubeIframeAPIReady() {
+          //-   player = new YT.Player('player', {
+          //-   events: {
+          //-   'onReady': onPlayerReady
+          //-   },   
+          //-   playerVars: {
+          //-   'autoplay' : 1,
+          //-   'rel' : 0,
+          //-   'showsearch' : 0,
+          //-   'loop' : 1,
+          //-   'enablejsapi' : 1,
+          //-   'controls': 0,
+          //-   'iv_load_policy': 3,
+          //-   'showinfo': 0,
+          //-   'playlist': 'Rr8ljRgcJNM'
+          //-   }
+          //-   });
+          //-   }
+          //-   // 4. The API will call this function when the video player is ready.
+          //-   var player = event.target;
+          //-   var $ = document.querySelector.bind(document);
+          //-   function onPlayerReady(event) {
+          //-   player.playVideo();
+          //-   player.setVolume(0);
+          //-   }
+        .purpose__btn(data-toggle="modal" data-target="#video")  
+          #purpose__play.purpose__play.text-center
+            img.img-responsive(src='img/play.svg' alt='logo')
+          .purpose__text
+            span.purpose__item.purpose__item--1 У
+            span.purpose__item.purpose__item--2 з
+            span.purpose__item.purpose__item--3 н
+            span.purpose__item.purpose__item--4 а
+            span.purpose__item.purpose__item--5 й
+            span.purpose__item.purpose__item--6 т
+            span.purpose__item.purpose__item--7 е
+            span.purpose__item.purpose__item--8 
+            span.purpose__item.purpose__item--9 в
+            span.purpose__item.purpose__item--10 с
+            span.purpose__item.purpose__item--11 е 
+            span.purpose__item.purpose__item--12
+            span.purpose__item.purpose__item--13 о
+            span.purpose__item.purpose__item--14 
+            span.purpose__item.purpose__item--15 п
+            span.purpose__item.purpose__item--16 р
+            span.purpose__item.purpose__item--17 о
+            span.purpose__item.purpose__item--18 е
+            span.purpose__item.purpose__item--19 к
+            span.purpose__item.purpose__item--20 т
+            span.purpose__item.purpose__item--21 е
+            span.purpose__item.purpose__item--22 
+            span.purpose__item.purpose__item--23 з
+            span.purpose__item.purpose__item--24 а
+            span.purpose__item.purpose__item--25 
+            span.purpose__item.purpose__item--26 м
+            span.purpose__item.purpose__item--27 и
+            span.purpose__item.purpose__item--28 н
+            span.purpose__item.purpose__item--29 у
+            span.purpose__item.purpose__item--30 т
+            span.purpose__item.purpose__item--31 у
+

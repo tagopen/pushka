@@ -1,0 +1,58 @@
+each item, i in content.index.event.tabs.tabPanel
+  .modal.fade(tabindex='-1', role='dialog', aria-hidden='true', id='modal' + (i + 1))
+    .modal-dialog.modal-lg
+      .modal-content.modal__content
+        button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+          svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='30px', height='30px')
+            path(fill-rule='evenodd', d='M29.849,25.606 L25.606,29.848 L15.000,19.242 L4.393,29.848 L0.150,25.606 L10.757,14.999 L0.150,4.393 L4.393,0.150 L15.000,10.756 L25.606,0.150 L29.849,4.393 L19.242,14.999 L29.849,25.606 Z')
+        .modal__head
+          .modal__box
+            .row
+              .col-xs-12.col-sm-4
+                .modal__image
+                  img.img-responsive.event__img(src=item.img.src alt=item.img.alt)
+              .col-xs-12.col-sm-8 
+                .modal__info
+                  .modal__heading!= item.name
+                  .modal__text!= item.text
+                  .event__detail.detail
+                    .detail__item!= item.detail.person
+                    .detail__item!= item.detail.date
+                  a.button.button__scroll(href="#", data-href=".modal__body")
+                    .button__text!=item.btn.name
+                      span.button__bord!= item.btn.delimeter
+        .modal__body
+          .modal__heading.modal__heading--color Запись на мероприятие
+          .modal__subheading Для записи на мероприятие, оставьте свои контетные данные.
+          form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
+            .row
+              .form-group.col-xs-12
+                .input__heading.input__heading--size ВАШИ ИМЯ И ФАМИЛИЯ
+                input.form-control.form__input.form__input--size.form__name(aria-invalid='false', placeholder='Имя и фамилия', required, name='name', type='text')    
+              .form-group.col-xs-12.col-sm-5
+                .input__heading.input__heading--size ВАШ ТЕЛЕФОН
+                input.form-control.form__input.form__input--size.form__phone(aria-invalid='false', placeholder='Телефон', name='phone', type='tel')
+              .form-group.col-xs-12.col-sm-1  
+                .modal__bord ИЛИ  
+              .form-group.col-xs-12.col-sm-6
+                .input__heading.input__heading--size ВАШ E-MAIL
+                input.form-control.form__input.form__input--size.form__name(aria-invalid='false', placeholder='E-mail', name='email', type='email')
+            .modal__group     
+              .row.modal__row.modal__height   
+                .col-xs-12.col-sm-6   
+                  button.button.button--size.modal__btn(name='form[контакты]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
+                    .button__text
+                      | Записаться
+                      span.button__bord —  
+                .col-xs-12.col-sm-6
+                  .modal__accept Нажимая кнопку «Записаться», я даю согласие на обработку моих персональных данных                  
+              .contactForm--success.modal__height Спасибо, ваши данные успешно отправлены
+#video.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__size
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='30px', height='30px')
+          path(fill-rule='evenodd', d='M29.849,25.606 L25.606,29.848 L15.000,19.242 L4.393,29.848 L0.150,25.606 L10.757,14.999 L0.150,4.393 L4.393,0.150 L15.000,10.756 L25.606,0.150 L29.849,4.393 L19.242,14.999 L29.849,25.606 Z')
+      .modal__head
+        #player
+          iframe(src="https://www.youtube.com/embed/Rr8ljRgcJNM?ecver=1&showinfo=0&iv_load_policy=3&showsearch=0" frameborder="0" allowfullscreen)

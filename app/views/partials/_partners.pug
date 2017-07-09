@@ -1,0 +1,28 @@
+mixin personalCols(count)
+  if (count < 4)
+    .col-xs-6.col-md-3.partner__col.partner__col-xs
+      if (block)
+        block     
+  if ((count >= 4) && (count <= 7))
+    .col-xs-6.col-md-3.partner__col.partner__col--prehidden
+      if (block)
+        block
+  else if  (count > 7)
+    .col-xs-6.col-md-3.partner__col.partner__col--hidden
+      if (block)
+        block
+.partner
+  .container
+    .row
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-lg-6.col-lg-offset-2
+        .heading.partner__heading!=content.index.partners.heading
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-lg-6.col-lg-offset-2
+        .subheading.partner__subheading!=content.index.partners.subheading
+  .container.partner__container      
+    .partner__btn(href="#")
+      img.img-responsive(src='img/down.svg' alt='стрелка')
+    .row
+      each item, i in content.index.partners.items
+        +personalCols(i)
+          .partner__box
+            img.img-responsive(src=item.img.src, alt=item.img.alt)

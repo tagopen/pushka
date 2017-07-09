@@ -1,0 +1,34 @@
+nav.navbar
+  .container
+    .row
+      .col-xs-3
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-collapse')
+            span.navbar-toggle__lines
+      .col-xs-2.col-md-1.pull-right.text-center   
+        .lang
+          .dropdown
+            a.dropdown-toggle(type='button', data-toggle='dropdown')
+              .lang__text Ru
+            ul.dropdown-menu
+              li.text-center
+                a.lang__text(href='#') Ua
+              li.text-center
+                a.lang__text(href='#') En
+      .col-xs-7.col-md-4.pull-right.text-center    
+        .phone
+          a.phone__link(href='tel:380955153355')
+            span.phone__link--text +38 095 515 33 55
+      .col-xs-12.col-md-7      
+        #example-navbar-collapse.navbar-collapse.navbar-ex1-collapse.collapse
+          ul.nav.nav-justified
+            li.nav__item
+              a.nav__link(href='.event') Мероприятия
+            li.nav__item
+              a.nav__link(href='.course') Курсы
+            li.nav__item
+              a.nav__link(href='.coworking') Коворкинг
+            li.nav__item
+              a.nav__link(href='.service') Бюро
+            li.nav__item
+              a.nav__link(href='.contact') Контакты 

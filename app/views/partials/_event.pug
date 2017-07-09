@@ -1,0 +1,27 @@
+.event
+  .container
+    .row
+      .col-xs-12.col-sm-11.col-sm-offset-1.col-lg-9.col-lg-offset-2
+        .heading.event__heading!=content.index.event.heading
+          span.event__group
+            each item, i in content.index.event.tabs.tabControl
+              a.event__heading--link(class= {"event__heading--link-off": i === 1}, data-tab-panel=item.href)!= item.name
+              //- .event__bord.event__heading--link.event__heading--link-off /
+      .col-xs-12.col-sm-8.col-sm-offset-1.col-lg-6.col-lg-offset-2      
+        .subheading.event__subheading!=content.index.event.subheading   
+    .row
+       each item, i in content.index.event.tabs.tabPanel
+        .col-xs-12.col-sm-6.col-md-4.event__col
+          .event__box(data-toggle="modal" data-target=item.target)
+            .event__head
+              img.img-responsive.event__img(src=item.img.src, alt=item.img.alt)
+              .event__name!= item.name
+            .event__info
+              .event__text!= item.text
+              .event__detail.detail
+                .detail__item!= item.detail.person 
+                .detail__item!= item.detail.date  
+              a.button.event__btn.button--size
+                .button__text!= item.btn.name
+                  span.button__bord!= item.btn.delimeter
+  

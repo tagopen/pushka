@@ -1,0 +1,1260 @@
++comment('general style')
++ic
+@each $sprite in $spritesheet-sprites
+  .ic--#{nth($sprite, 10)}
+    &:before
+      +bs($sprite)       
+a
+  text-decoration: none
+  outline: none
+  cursor: pointer
+  &:hover,
+  &:focus
+    text-decoration: none     
+    outline: none
+.dropdown.open
+  background-color: #00ffc0    
+  .lang__text
+    color: #000 !important
+.form
+  &__input
+    padding: 16px 30px 15px 32px
+    border: 0
+    box-shadow: none
+    font: 400 13px/25px $main-font-helvetica
+    text-transform: uppercase
+    letter-spacing: 2px
+    color: #000
+    transition: all .3s ease
+    &:focus
+      box-shadow: inset 0 0 0 2px rgba(0, 255, 192, 1)
+      outline-offset: 0
+      outline: none
+    &--size
+      font: 700 italic 12px/25px $main-font-helvetica 
+      text-transform: uppercase
+  &__message    
+    resize: none
+    margin-bottom: 30px
+  &__btn
+    border: 0
+    padding-right: 95px !important
+  &__press
+    text-align: center
++r(760)
+  .form
+    &__press
+      text-align: right       
+    &__input
+      &--size  
+        font: 700 italic 15px/25px $main-font-helvetica 
+.input
+  &__heading
+    margin-bottom: 10px   
+    font: 400 10px/25px $main-font-helvetica
+    color: #171718
+    text-transform: uppercase
+    letter-spacing: 2px
+    &--size
+      color: #fefefe
+      font: 700 italic 10px/25px $main-font-helvetica
+.text-danger
+  color: #e74c3c
+  text-align: left  
+.modal
+  -webkit-overflow-scrolling: touch
+  transform: translateZ(0)  
+.heading
+  font: 700 italic 16px/32px $main-font-helvetica
+  text-transform: uppercase
+  color: #000
+  letter-spacing: 1.5px
+  text-align: center
++r(760)
+  .heading
+    font: 700 italic 34px/56px $main-font-helvetica 
+    letter-spacing: 4.5px
+    text-align: left
+.subheading
+  font: 500 15px/24px $main-font-helvetica
+  color: #000 
+  letter-spacing: 2px
+  text-align: justify  
++r(760)
+  .subheading
+    font: 500 20px/35px $main-font-helvetica
+    padding-right: 50px  
+.button 
+  display: inline-block
+  background-color: #000
+  padding: 17px 50px 15px 30px
+  font: 700 italic 13px/25px $main-font-helvetica
+  letter-spacing: 5px
+  color: #fff
+  text-transform: uppercase
+  &__text
+    display: inline-block
+    position: relative
+  &:hover,
+  &:focus
+    text-decoration: none
+    color: #00ffc0
+    .button__bord
+      right: -60px
+  &__bord
+    position: absolute
+    right: -30px
+    transition: all 0.3s ease    
+  &--size
+    width: 100%  
++r(760)
+  .button
+    font: 700 italic 15px/25px $main-font-helvetica   
++r(1200)
+  .heading
+    font: 700 italic 40px/56px $main-font-helvetica  
+  .button
+    letter-spacing: 7px  
+    padding: 17px 60px 15px 38px
++r(960)    
++comment("home page style")
+.wrapper
+  background-image: linear-gradient(to top, #beecfb 0%, #f7b8cd 100%)
+  min-height: 100vh
+.wrapper
+  overflow: hidden  
+.navbar
+  background-color: #171718  
+  border-radius: 0
+  margin: 0
+  border: 0
+  &-nav
+    margin: 0 auto
+    display: table
+    table-layout: fixed
+    float: none
+.navbar-toggle
+  margin: 0
+  &__lines,
+  &__lines:before,
+  &__lines:after
+    display: inline-block
+    background-color: #f6f7fb
+  &__lines
+    position: relative
+    width: 30px
+    height: 5px
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      left: 0
+      width: 100%
+      height: 100%
+      transition: 0.3s all ease-out
+    &:before
+      top: 8px
+    &:after
+      top: -8px
+  &--open 
+    .navbar-toggle__lines 
+      background: transparent
+      transform: scale3d(0.8, 0.8, 0.8)
+      &:before,
+      &:after
+        transform-origin: 50% 50%
+        top: 0
+      &:before 
+        transform: rotate3d(0, 0, 1, 45deg)
+      &:after
+        transform: rotate3d(0, 0, 1, -45deg)
+.nav
+  &__link
+    color: $color-pink 
+    font: 500 16px/30px $main-font-helvetica
+    padding: 8px 10px 8px
+    text-align: left
+    letter-spacing: 1px
+    &:hover,
+    &:focus
+      color: #00ffc0
+.phone
+  padding: 8px 0 0
+  &__link
+    &--text
+      color: #00ffc0    
+      font: 700 16px/30px $main-font-helvetica
+      text-transform: uppercase
+    &:hover,
+    &:focus
+      text-decoration: none
+.lang
+  padding-top: 8px
+  &__text
+    color: $color-pink  
+    font: 700 16px/30px $main-font-helvetica
+    padding-right: 3px
+    &:hover,
+    &:focus
+      text-decoration: none 
+      color: #00ffc0 
++r(760)
+  .nav
+    &__link
+      font: 500 18px/37px $main-font-helvetica
+  .phone
+    &__link
+      &--text
+        letter-spacing: 2px  
+        font: 700 18px/37px $main-font-helvetica
+  .lang
+    &__text
+      letter-spacing: 3px      
+      font: 700 18px/37px $main-font-helvetica     
++r(1200)      
+  .nav
+    &__link
+      text-align: left !important
+      letter-spacing: 5px
+  .lang
+    &__text
+      letter-spacing: 5px 
+.container
+  &--size
+    width: 100% !important   
+    padding: 0 !important
++r(760)    
+  .container
+    &--size
+      padding: 0 15px !important
++r(960)
+  .container
+    &--size 
+      padding: 0 !important    
++r(1600)
+  .container
+    width: 1488px   
+  .nav
+    &__link
+      letter-spacing: 6px  
+  .phone
+    padding: 6px 0 0 30px     
+    &__link
+      &--text
+        letter-spacing: 6px
+  .lang
+    &__text
+      letter-spacing: 6px
+      padding-right: 10px
++comment("intro style")     
+.intro
+  padding: 40px 0 50px
+  position: relative
+  &__bg 
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    display: block
+    background: url(../img/grid.svg) no-repeat
+    background-size: cover
+    opacity: 0.1
+  &__image
+    position: absolute
+    display: block
+    height: 100%
+    width: 100%
+    top: 10px
+    right: 0  
+  &__img
+    mix-blend-mode: color-burn
+.logo
+  &__image
+    display: block
+    max-width: 470px    
+    margin: 0 0 82px 8px
+  &__text
+    padding-left: 7px
+    font: 700 italic 12px/24px $main-font-helvetica
+    text-transform: uppercase
+    text-align: justify
+    color: #000
+    &--white
+      color: #fff   
++r(760)
+  .logo
+    &__text
+      font: 700 italic 19px/28px $main-font-helvetica
+    &__image
+      margin-bottom: 30px  
+  .intro
+    padding: 35px 0 80px
+    &__image
+      width: 50%
+      top: 30px
+      right: 0  
+    &__line
+      display: inline-block
+      position: absolute
+      img
+        height: 300px
+      &--1
+        top: 70px
+        left: 5rem 
+      &--2
+        top: 70px
+        left: 20rem
+      &--3  
+        top: 70px
+        left: 96rem
++r(960)
+  .logo
+    font: 700 italic 22px/39px $main-font-helvetica
+  .intro   
+    padding: 105px 0 205px
+    padding-bottom: 205px  
+    &__image
+      top: 70px 
+      width: 54%
+    &__line
+      img
+        height: 463px
+      &--1
+        top: 138px
+        left: 12rem 
+      &--2
+        top: 138px
+        left: 52rem
+      &--3  
+        top: 138px
+        left: 96rem
++r(1200)        
+  .intro
+    &__dress
+      display: inline-block
+      height: 100%
+      width: 100%
+      background: url(../img/dress.png) repeat-x
+      mix-blend-mode: color-burn
++r(1600)      
+  .intro
+    &__image
+      width: 60%
+  .logo
+    &__text
+      padding-right: 120px
++rhx(600)
+  .logo
+    &__img
+      max-height: 300px
+    &__text
+      padding-right: 100px
+  .intro
+    padding-top: 30px
+    &__image
+      top: 20px        
++comment("purpose style")         
+.purpose
+  padding-top: 28px   
+  padding-bottom: 140px
+  &__heading
+    margin-bottom: 30px 
+  &__video
+    position: relative   
+    height: 200px
+    width: 100%
+    iframe
+      position: absolute
+      height: 100%
+      width: 100%
+      left: 0
+      top: 0
+  &__overlay
+    position: absolute
+    height: 100%
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 30
+    background-color: transparent    
+  &__btn
+    position: absolute
+    left: 50%
+    bottom: -75px
+    margin-left: -70px  
+    cursor: pointer
+    z-index: 40
+    &:hover,
+    &:focus
+      .purpose__text
+        -webkit-animation-play-state: paused
+        -moz-animation-play-state: paused
+        -o-animation-play-state: paused
+        animation-play-state: paused
+  &__text
+    position: relative  
+    transform-origin: center center
+    height: 140px
+    width: 140px
+    -webkit-animation: spin 10s linear infinite
+    -moz-animation: spin 10s linear infinite
+    animation: spin 10s linear infinite
+  &__play  
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-left: -25px
+    margin-top: -37px
+  &__item
+    position: absolute  
+    font: 500 16px/20px $main-font-helvetica
+    text-transform: uppercase
+    color: #fff
+    height: 70px
+    transform-origin: bottom center
+    left: 64px
+    top: 0 
+    width: 11.6px
+#player
+  min-height: 100vh
+  position: relative
+  iframe
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%   
+    z-index: 50 
+@for $i from 1 through 31
+  .purpose__item--#{$i}
+    +transform(rotate(($i*11.4)+deg))
+@-ms-keyframes spin 
+  from  
+    -ms-transform: rotate(0deg) 
+  to 
+    -ms-transform: rotate(-360deg)    
+@-moz-keyframes spin  
+  from  
+    -moz-transform: rotate(0deg)
+  to  
+    -moz-transform: rotate(-360deg)  
+@-webkit-keyframes spin  
+  from  
+    -webkit-transform: rotate(0deg) 
+  to  
+    -webkit-transform: rotate(-360deg) 
+@keyframes spin  
+  from  
+    transform: rotate(0deg)
+  to  
+    transform: rotate(-360deg)
+#purpose
+  &__play
+    z-index: 100 
++r(560)
+  .purpose
+    &__video
+      height: 320px       
++r(760)
+  .purpose
+    &__heading
+      margin-bottom: 80px
+    &__video
+      height: 394px  
+    &__text  
+      height: 180px
+      width: 180px
+    &__item  
+      height: 90px
+      left: 84px
+      font: 500 18px/20px $main-font-helvetica
+    &__btn
+      margin-left: -90px 
+      bottom: -90px
++r(1200)
+  .purpose
+    margin-bottom: 224px
+    &__video
+      height: 641px   
++r(1600)
+  .purpose
+    &__video
+      width: 1200px
+      height: 675px
+      margin: 0 auto                 
++comment("event style")    
+.event
+  padding-bottom: 50px
+  &__group
+    display: block
+  &__heading
+    margin-bottom: 30px
+    &--link
+      display: inline-block
+      font: 700 italic 14px/26px $main-font-helvetica
+      text-decoration: underline
+      text-transform: uppercase 
+      color: #000
+      vertical-align: top
+      &-off
+        color: #988da4
+        text-decoration: none
+        &:hover,
+        &:focus
+          text-decoration: none
+      &:nth-child(1)
+        position: relative
+        margin-right: 30px
+        &:before
+          content: '/'
+          position: absolute
+          top: 0
+          right: -20px
+          color: #988da4      
+  &__subheading
+    margin-bottom: 60px
+  &__head
+    position: relative
+    margin-bottom: 35px
+    text-align: center
+    padding: 25px 25px 0
+  &__img
+    display: inline-block
+  &__info
+    padding: 0 10px  
+  &__name
+    position: absolute
+    width: 100%
+    bottom: -5px
+    left: 0
+    font: 700 italic 22px/36px $main-font-helvetica
+    text-transform: uppercase
+    color: #000
+    padding: 0 25px
+    text-align: center
+  &__text
+    font: 500 13px/25px $main-font-helvetica
+    color: #000
+    margin-bottom: 30px
+    padding: 0 25px 0 15px
+    letter-spacing: 1px
+  &__detail 
+    font: 700 italic 13px/25px $main-font-helvetica
+    color: #000
+    margin-bottom: 40px
+    text-transform: uppercase
+  &__btn
+    opacity: 0
+    visibility: hidden
+    transition: all 0.5s ease
+  &__box
+    cursor: pointer
+    &:hover,
+    &:focus
+      .event__btn
+        opacity: 1
+        visibility: visible 
++r(760)
+  .event
+    &__group
+      display: inline-block
+    &__bord
+      padding: 0 30px 0 6px  
+    &__heading
+      margin-bottom: 50px
+      &--link  
+        font: 700 italic 20px/53px $main-font-helvetica
+        &:nth-child(1)
+          margin-right: 45px
+          &:before
+            right: -30px
+    &__subheading
+      margin-bottom: 100px    
+    &__head  
+      padding: 25px 60px 0
+    &__name
+      text-align: left  
+    &__text  
+      font: 500 15px/25px $main-font-helvetica
+    &__detail  
+      font: 700 italic 15px/25px $main-font-helvetica
++r(960)      
+  .event
+    &__group
+      padding-left: 45px
++r(1200)     
+  .event
+    padding-bottom: 120px
+    &__info
+      padding: 0 40px    
+    &__name  
+      padding: 0 45px
+    &__text
+      padding-left: 40px  
++r(1600)           
+  .event
+    &__name
+      padding: 0 70px
+    &__info
+      padding: 0 65px 
+    &__text
+      padding-left: 50px 
++comment("course style")  
+.course
+  margin-bottom: 40px
+  &__box
+    background: rgba(255,254,254,0.2)
+    &:nth-child(1)
+      margin-bottom: 30px
+  &__heading
+    margin-bottom: 52px   
+  &__subheading
+    letter-spacing: 1px
+    text-align: justify  
+    margin-bottom: 80px
+  &__image
+    min-height: 480px
+    &--1
+      background: url(../img/course1.png) no-repeat
+      background-size: cover
+    &--2
+      background: url(../img/course2.png) no-repeat
+      background-size: cover  
+  &__info
+    position: relative
+    padding: 25px 10px 110px 5px   
+  &__name
+    font: 700 italic 18px/30px $main-font-helvetica
+    color: #000
+    text-transform: uppercase
+    margin-bottom: 27px
+    letter-spacing: 1px
+    text-align: center
+  &__details
+    text-align: center  
+  &__elem     
+    font: 700 italic 13px/25px $main-font-helvetica
+    color: #000
+    text-transform: uppercase
+    letter-spacing: 1px
+  &__btn
+    padding-right: 61px 
+    position: absolute
+    bottom: 35px
+    left: 50%
+    margin-left: -115px
++r(760)    
+  .course
+    margin-bottom: 200px
+    &__box
+      margin-bottom: 0
+    &__info  
+      padding: 25px 10px 0 0 
+    &__name  
+      text-align: left
+      font: 700 italic 24px/40px $main-font-helvetica
+    &__elem  
+      font: 700 italic 15px/25px $main-font-helvetica
+    &__details
+      text-align: left
+    &__btn
+      margin: 0
+      left: auto  
+      padding-right: 80px
++r(960)      
+  .course
+    &__btn
+      left: -15px
++r(1200)
+  .course
+    &__info
+      padding: 25px 68px 0 15px  
+    &__name  
+      font: 700 italic 30px/45px $main-font-helvetica
+      letter-spacing: 3px
+    &__btn 
+      left: auto
++r(1600)      
+  .course
+    &__info
+      padding-right: 50px
++comment("coworking style")     
+.coworking
+  padding: 17px 0 217px
+  &__heading
+    margin-bottom: 51px
+  &__subheading  
+    letter-spacing: 1px
+    text-align: justify  
+    margin-bottom: 55px
+.slider
+  &__box
+    position: relative
+    padding: 50px 20px 0 20px
+  &__icon
+    position: absolute
+    left: 10px
+    top: -18px
+    transform: scale(0.7)  
+  &__text    
+    position: relative
+    z-index: 30
+    font: 400 14px/24px $main-font-helvetica
+    color: #000
+    letter-spacing: 2px
+  &__image  
+    padding: 25px 15px
+  &__item
+    outline: 0  
+  .slick
+    &-slide
+      opacity: 0.5
+      outline: 0 
+    &-current
+      opacity: 1  
+    &-prev
+      z-index: 50
+      display: inline-block
+      width: 106px
+      height: 109px
+      background: url(../img/grnarrowl.svg) no-repeat
+      left: 0
+    &-next
+      z-index: 50
+      display: inline-block
+      width: 106px
+      height: 109px
+      background: url(../img/grnarrow.svg) no-repeat
+      right: 0
+    &-prev,
+    &-next
+      top: auto
+      bottom: -140px  
+    &-arrow.slick-disabled
+      display: none !important  
++r(760)
+  .slider
+    &__icon
+      left: 51px
+      top: 0  
+      transform: scale(1)
+    &__text
+      font: 400 20px/35px $main-font-helvetica
+    .slick  
+      &-prev,
+      &-next
+        bottom: -165px  
++r(960)         
+  .slider
+    &__box
+      padding: 200px 40px 0 70px
+    .slick  
+      &-prev,
+      &-next
+        bottom: auto
+        top: 50%           
++r(1600) 
+  .slider
+    &__box
+      padding: 261px 40px 0 128px
+    &__item
+      min-width: 1100px     
+    &__image  
+      padding: 52px 85px 0 20px    
++comment("service style")       
+.service
+  margin-bottom: 10px
+  &__heading
+    margin-bottom: 55px
+  &__subheading
+    margin-bottom: 55px 
+    letter-spacing: 0
+  &__box
+    margin-bottom: 25px  
+    overflow: hidden
+  &__info
+    position: relative
+    display: table
+    margin: 0 auto
+    height: 280px
+    width: 280px
+    padding: 0 20px
+    background-color: #000
+    border-radius: 50%  
+    text-align: center
+    cursor: pointer
+    overflow: hidden
+  &__bg  
+      background: url(../img/servicehover.png) no-repeat
+      background-size: cover
+      opacity: 0
+      transition: all .5s ease
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 100%
+      &--shown
+        opacity: 1
+  &__text
+    display: table-cell  
+    vertical-align: middle
+    font: 700 14px/32px $main-font-helvetica
+    text-transform: uppercase
+    letter-spacing: 2px
+    color: #fff    
++r(760)    
+  .service
+    &__subheading
+      margin-bottom: 144px
+    &__text
+      font: 700 18px/35px $main-font-helvetica 
+      letter-spacing: 3px
+      position: relative
+      z-index: 30
++r(1200)
+  .service
+    &__info
+      height: 346px
+      width: 346px
+    &__box
+      margin-bottom: 0  
+    &__text  
+      padding: 0 50px 
++comment("tagline style") 
+.tagline
+  padding: 50px 0 0
+  margin-bottom: 100px
+  &__heading
+    margin-bottom: 68px 
+    font: 700 18px/28px $main-font-helvetica 
+  &__btn
+    width: 290px  
+    padding: 20px 60px 20px 40px  
++r(960)    
+  .tagline
+    margin-bottom: 160px
+    padding: 130px 0 0
+    &__heading
+      font: 700 30px/68px $main-font-helvetica 
++r(1200) 
+  .tagline
+    margin-bottom: 217px     
++comment("comments style")   
+.comment
+  margin-bottom: 192px
+  &__heading
+    margin-bottom: 100px
+  &__author
+    font: 700 18px/30px $main-font-helvetica
+    text-transform: uppercase
+    color: #000
+    margin-bottom: 4px
+    letter-spacing: 3px
+    text-align: center
+  &__info
+    font: 700 14px/30px $main-font-helvetica
+    text-transform: uppercase
+    margin-bottom: 20px
+    color: #000
+    letter-spacing: 1.5px
+    text-align: center
+    &--span
+      text-decoration: underline
+  &__text   
+    font: 500 14px/22px $main-font-helvetica 
+    text-align: justify
+    color: #000
+  &__box
+    padding: 0 15px  
+  &__image
+    text-align: center
+    padding: 0 15px 25px
+    img
+      display: inline-block  
+  &__slider    
+    outline: 0 
+    .slick
+      &-slide
+        opacity: 0.5
+        outline: 0 
+      &-current
+        opacity: 1
+      &-prev
+        z-index: 50
+        display: inline-block
+        width: 106px
+        height: 109px
+        background: url(../img/grnarrowl.svg) no-repeat
+        left: 0
+      &-next
+        z-index: 50
+        display: inline-block
+        width: 106px
+        height: 109px
+        background: url(../img/grnarrow.svg) no-repeat
+        right: 0
+      &-prev,
+      &-next
+        top: 300px
+      &-arrow.slick-disabled
+        display: none !important  
++r(760)
+  .comment
+    &__box
+      padding: 0
+    &__author
+      text-align: left
+      font: 700 23px/35px $main-font-helvetica
+    &__info
+      text-align: left   
+      font: 700 18px/35px $main-font-helvetica
+    &__text  
+      font: 500 20px/35px $main-font-helvetica  
++r(960)     
+  .comment
+    &__slider
+      .slick
+        &-prev,
+        &-next
+          top: 50% 
++r(1200)
+  .comment
+    &__author
+      letter-spacing: 5px       
+    &__info  
+      margin-bottom: 60px
+      letter-spacing: 3.5px
++r(1600)
+  .comment
+    &__info
+      margin-bottom: 110px
+    &__text
+      padding-right: 80px  
++comment("partners style")    
+.partner
+  &__container
+    position: relative
+    margin-bottom: 140px
+  &__btn
+    position: absolute
+    height: 325px
+    top: 325px
+    width: 100%
+    left: 0 
+    z-index: 100
+    text-align: center
+    background: url(../img/greenbg.jpg) no-repeat
+    background-position: left center
+    cursor: pointer
+    transition: all .5s ease
+    &--opened
+      img
+        transform: rotate(180deg)
+    &:hover,
+    &:focus
+      top: 355px
+      transition: all .5s ease
+    &.partner__btn--opened
+      height: 80px
+      top: auto
+      bottom: -80px
+      &:hover,
+      &:focus
+        bottom: -50px  
+      img
+        margin-top: 15px 
+    img
+      display: block
+      margin: 140px auto 0  
+  &__heading
+    margin-bottom: 51px
+  &__subheading
+    margin-bottom: 100px  
+  &__box
+    text-align: center
+    padding: 70px 0
+    transition: all .5s ease
+    cursor: crosshair
+    &:hover,
+    &:focus
+      background: rgba(255,255,255,0.2)
+      transition: all .5s ease
+    img
+      display: inline-block  
+  &__col
+    transition: all .5s ease
+    &--prehidden
+      opacity: 0.1   
+      transition: all .5s ease  
+    &--hidden
+      display: none
+      opacity: 0  
+    &--opacity
+      opacity: 0.5  
++rx(959)
+  .partner
+    &__col
+      &--prehidden
+        display: none
+        opacity: 0
+      &-xs
+        &:nth-child(n+3)   
+          opacity: 0.2  
+        &--shown
+          &:nth-child(n+3)
+            opacity: 1  
++r(960)
+  .partner
+    &__btn
+      &.partner__btn--opened
+        &:hover,
+        &:focus 
+          ~.row>.partner__col:nth-child(n+5)
+            opacity: 0.5     
++comment("contact style")              
+.contact
+  &__container
+    position: relative
+    background-color: #fff
+    padding-top: 84px
+    padding-bottom: 100px
+  &__bg
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: url(../img/grid.svg) no-repeat
+    background-size: cover 
+    opacity: 0.1
+  &__heading
+    font: 400 30px/60px $main-font-helvetica
+    text-transform: uppercase
+    color: #000
+    margin-bottom: 25px
+    letter-spacing: 3px 
+  &__group
+    margin-bottom: 15px  
+  &__link
+    font: 400 16px/30px $main-font-helvetica
+    color: #000
+    letter-spacing: 1px
+    transition: all .3s ease
+    &:hover,
+    &:focus
+      color: #00ffc0
+  &__box
+    padding-top: 20px
+    margin-bottom: 30px    
+  &__social
+    font: 400 16px/40px $main-font-helvetica
+    color: #171718
+    text-transform: uppercase
+    text-decoration: underline
+    transition: all .3s ease
+    text-align: left
+    letter-spacing: 2px
+    &:hover,
+    &:focus
+      color: #00ffc0
+  &__form
+    margin-bottom: 65px   
+.form
+  &-group
+    margin-bottom: 15px     
+#map
+  height: 200px
++r(760)
+  .contact
+    &__heading
+      margin-bottom: 85px
+      font: 400 40px/70px $main-font-helvetica
+    &__group
+      margin-bottom: 35px  
+    &__box
+      margin-bottom: 82px  
+    &__link
+      letter-spacing: 1.5px  
+      font: 400 20px/35px $main-font-helvetica
+    &__social  
+      font: 400 20px/44px $main-font-helvetica
+  .form
+    &-group
+      margin-bottom: 35px    
+  #map
+    height: 300px
++r(1200)
+  .contact
+    &__col
+      &--2,
+      &--3,
+      &--4
+        text-align: center
+  #map
+    height: 400px      
++comment("footer style")  
+.footer
+  padding: 35px 0 35px
+  &__copy
+    font: 400 16px/30px $main-font-helvetica
+    color: #000
+    opacity: 0.5
+    margin-bottom: 15px
+    text-align: center
+  &__group
+    display: inline-block  
+    font: 400 12px/21px $main-font-helvetica
+    color: #000
+    opacity: 0.5
+    margin-right: 10px
+    transition: all .3s ease
+    &:hover,
+    &:focus
+      opacity: 1
+  &__creater
+    text-align: center    
+  &__text
+    display: inline-block
+    vertical-align: top
+    padding-top: 5px  
+    margin-right: 10px
+  &__link
+    display: inline-block  
+    &--lako
+      img
+        width: 58px
+        height: 24px
++r(760)
+  .footer
+    padding: 90px 0 65px
+    &__copy
+      margin-bottom: 0
+      text-align: left
+      font: 400 20px/35px $main-font-helvetica
+    &__creater
+      text-align: left  
+    &__group
+      margin-right: 35px     
++comment("modal style")  
+.modal
+  &__content
+    position: relative
+    border-radius: 0
+    border: 0
+  &__close
+    opacity: 1
+    font-size: 40px
+    text-shadow: none
+    right: 30px
+    top: 30px
+    position: absolute
+    z-index: 50
+    &:hover,
+    &:focus
+      svg
+        fill: #00ffc0  
+  &__box
+    padding: 70px 15px 30px
+  &__heading
+    font: 700 italic 24px/38px $main-font-helvetica
+    color: #000
+    text-transform: uppercase    
+    margin-bottom: 30px 
+    letter-spacing: 2px
+    text-align: center
+    &--color
+      color: #00ffc0
+  &__subheading
+    font: 500 16px/24px $main-font-helvetica
+    color: #fff
+    letter-spacing: 1px
+    margin-bottom: 20px
+    text-align: center
+  &__text  
+    font: 500 15px/25px $main-font-helvetica
+    color: #000
+    margin-bottom: 30px
+  &__body
+    padding: 40px 10px
+    background-color: #000  
+  &__btn
+    color: #171718
+    background-color: #00ffc0
+    border: 0
+    &:hover,
+    &:focus
+      color: #171718
+  &__bord
+    font: 700 italic 10px/25px $main-font-helvetica 
+    text-transform: uppercase
+    color: #fefefe
+    opacity: 0.5
+    text-align: center
+  &__accept  
+    font: 400 15px/20px $main-font-helvetica 
+    color: #fff
+    opacity: 0.3
+    letter-spacing: 1.5px
+    padding-top: 20px
+  &__size
+    width: 100%  
+    margin: 0
+    box-shadow: none
+    border: 0
+    .modal
+      &__content
+        border: 0
+      &__close
+        position: absolute
+        right: 30px
+        top: 30px
+        z-index: 100  
+        font-size: 50px
+        fill: #00ffc0
+  &__group
+    position: relative
+    overflow: hidden    
+.button__scroll
+  width: 290px     
+.contactForm--success
+  position: absolute
+  left: 100%
+  top: 0
+  opacity: 0
+  padding: 0 15px  
++r(760)
+  .modal
+    &__box
+      padding: 80px 25px 65px
+    &__body  
+      padding: 60px 80px
+    &__heading
+      text-align: left  
+      font: 700 italic 30px/45px $main-font-helvetica
+    &__subheading
+      text-align: left  
+      font: 500 20px/30px $main-font-helvetica
+    &__bord
+      padding-top: 55px  
+    &__accept
+      padding-top: 0  
++r(960)
+  .modal
+    &__box
+      padding: 80px 80px 65px
+    &__body  
+      padding: 100px 100px  
++r(1200)    
+  .modal
+    &__box
+      padding: 80px 100px 65px
+    &__body
+      padding: 100px 140px      
++r(1600)      
+  .modal
+    &__box
+      padding: 80px 120px 65px
+    &__body
+      padding: 100px 200px
