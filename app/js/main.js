@@ -7,6 +7,13 @@
     $("#player iframe").attr('src', 'https://www.youtube.com/embed/Rr8ljRgcJNM?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
   })
 
+  $('#video__course').on('shown.bs.modal', function() {
+    $("#player iframe").attr('src', 'https://www.youtube.com/embed/Rr8ljRgcJNM?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+  })
+  $('#video__course').on('hidden.bs.modal', function() {
+    $("#player iframe").attr('src', 'https://www.youtube.com/embed/Rr8ljRgcJNM?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+  })
+
     $('.service__info').mouseover(function() {
       $(this).find('.service__bg').addClass('service__bg--shown');
     });
@@ -34,6 +41,8 @@
   });
 
 $(document).ready(function(){
+
+
    if( $( window ).width() <= 760 ) {
 
     $(".navbar").on("click",".nav__link", function (event) {
@@ -42,6 +51,14 @@ $(document).ready(function(){
       top = $(id).offset().top;
       $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+335}, 1500);
     });
+
+    $(".intro__btn-group").on("click","a.button", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+335}, 1500);
+    });
+
   };
   if( $( window ).width() > 760 ) {
 
@@ -51,6 +68,14 @@ $(document).ready(function(){
       top = $(id).offset().top;
       $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()}, 1500);
     });
+
+    $(".intro__btn-group").on("click","a.button", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+55}, 1500);
+    });
+
   };
 });
 

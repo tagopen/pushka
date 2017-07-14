@@ -1,0 +1,32 @@
+#entry.entry
+  .container
+    .row
+      .col-xs-12
+        .entry__body
+          .row
+            .col-xs-10.col-xs-offset-1.col-lg-6.col-lg-offset-3
+              .modal__heading.modal__heading--color Запись на мероприятие
+              .modal__subheading Для записи на курс, оставьте свои контетные данные.
+              form.contact__form.contactForm.contactForm--modal(method='post', action='./mail/mail.php')
+                .row
+                  .form-group.col-xs-12
+                    .input__heading.input__heading--size ВАШИ ИМЯ И ФАМИЛИЯ
+                    input.form-control.form__input.form__input--size.form__name(aria-invalid='false', placeholder='Имя и фамилия', required, name='name', type='text')    
+                  .form-group.col-xs-12.col-sm-5
+                    .input__heading.input__heading--size ВАШ ТЕЛЕФОН
+                    input.form-control.form__input.form__input--size.form__phone(aria-invalid='false', placeholder='Телефон', name='phone', type='tel')
+                  .form-group.col-xs-12.col-sm-1  
+                    .modal__bord ИЛИ  
+                  .form-group.col-xs-12.col-sm-6
+                    .input__heading.input__heading--size ВАШ E-MAIL
+                    input.form-control.form__input.form__input--size.form__name(aria-invalid='false', placeholder='E-mail', name='email', type='email')
+                .modal__group     
+                  .row.modal__row.modal__height   
+                    .col-xs-12.col-sm-6   
+                      button.button.button--size.modal__btn(name='form[контакты]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
+                        .button__text
+                          | Записаться
+                          span.button__bord —  
+                    .col-xs-12.col-sm-6
+                      .modal__accept Нажимая кнопку «Записаться», я даю согласие на обработку моих персональных данных                  
+                  .contactForm--success.modal__height Спасибо, ваши данные успешно отправлены

@@ -72,7 +72,7 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     <![endif]-->
 
   body.body
-    div.wrapper
+    div.wrapper(class={'wrapper--course' : relativePath === 'course'})
       block content
     block footer
     block modal

@@ -92,6 +92,9 @@ a
   letter-spacing: 5px
   color: #fff
   text-transform: uppercase
+  &--white
+    color: #171718
+    background-color: #fff
   &__text
     display: inline-block
     position: relative
@@ -114,7 +117,7 @@ a
   .heading
     font: 700 italic 40px/56px $main-font-helvetica  
   .button
-    letter-spacing: 7px  
+    letter-spacing: 6px  
     padding: 17px 60px 15px 38px
 +r(960)    
 +comment("home page style")
@@ -267,6 +270,9 @@ a
     width: 100%
     top: 10px
     right: 0  
+  &__photo
+    position: relative
+    z-index: 30  
   &__img
     mix-blend-mode: color-burn
 .logo
@@ -1079,7 +1085,7 @@ a
       letter-spacing: 1.5px  
       font: 400 20px/35px $main-font-helvetica
     &__social  
-      font: 400 20px/44px $main-font-helvetica
+      font: 400 16px/44px $main-font-helvetica
   .form
     &-group
       margin-bottom: 35px    
@@ -1092,6 +1098,8 @@ a
       &--3,
       &--4
         text-align: center
+    &__social  
+      font: 400 20px/44px $main-font-helvetica
   #map
     height: 400px      
 +comment("footer style")  
@@ -1196,7 +1204,7 @@ a
     font: 400 15px/20px $main-font-helvetica 
     color: #fff
     opacity: 0.3
-    letter-spacing: 1.5px
+    letter-spacing: 1px
     padding-top: 20px
   &__size
     width: 100%  
@@ -1258,3 +1266,137 @@ a
       padding: 80px 120px 65px
     &__body
       padding: 100px 200px
++comment('course page style') 
+.wrapper
+  &--course     
+    background-image: linear-gradient(to top, #beecfb 0%, #f7b8cd 100%)
+    .intro
+      padding-top: 82px
+      &__heading
+        margin-bottom: 42px
+        letter-spacing: 2px
+        font: 900 italic 36px/50px $main-font-helvetica
+        text-transform: uppercase
+        color: #000
+        position: relative
+        z-index: 35
+        text-align: center
+        &--white
+          color: #fff   
+    .logo__image
+      margin-bottom: 40px  
+.intro
+  &--course
+    margin-bottom: -170px
+    padding-bottom: 302px
+  &__photo
+    display: inline-block  
+    opacity: 0.3
+  &__btn-group
+    .button
+      width: 290px
+      position: relative
+      z-index: 35
+      &:nth-child(1)
+        margin-bottom: 20px  
++r(760)   
+  .wrapper
+    &--course 
+      .intro
+        &__heading
+          font: 900 italic 40px/60px $main-font-helvetica
+          text-align: left
+        &__btn
+          margin-right: 105px
++r(960)    
+ .wrapper
+    &--course 
+      .intro
+        &__heading
+          font: 900 italic 50px/80px $main-font-helvetica        
++r(1600)    
+ .wrapper
+    &--course 
+      .intro
+        &__heading
+          font: 900 italic 60px/90px $main-font-helvetica
+.course
+  &__details
+    &--margin
+      margin-bottom: 78px        
+.description
+  margin-bottom: 262px
+  &__panel
+    position: relative
+    z-index: 35
+  &__tab
+    text-align: center
+    background-color: #000
+    width: 50%
+    a
+      color: #fff
+      font: 700 italic 14px/25px $main-font-helvetica
+      text-transform: uppercase
+      padding: 16px 0
+.tab
+  &-content
+    min-height: 500px   
+    padding-top: 80px 
+  &__heading
+    font: 700 italic 24px/40px $main-font-helvetica
+    color: #000
+    text-transform: uppercase
+    margin-bottom: 36px
+    padding-top: 15px
+  &__text    
+    font: 500 16px/24px $main-font-helvetica  
+    color: #000
+    text-align: justify
+  &__video
+    iframe
+      height: 310px
+      width: 100% 
++r(760)
+  .tab
+    &__heading
+      font: 700 italic 30px/56px $main-font-helvetica
+    &__text  
+      font: 500 20px/35px $main-font-helvetica
+  .description
+    &__tab
+      width: 25%   
+      a
+        min-height: auto   
+        line-height: auto
+        letter-spacing: 4px
++r(1200)
+  .description
+    &__tab
+      a
+        letter-spacing: 6px        
+.entry
+  margin-bottom: 180px
+  &__body
+    background-color: #000
+    padding-top: 115px
+    margin: 0 -15px          
+.contact
+  &__container
+    &--course
+      margin: 0 -15px
+      padding-left: 15px
+      padding-right: 15px
++r(760)         
+  .entry
+    &__body
+      margin: 0 auto
+  .contact
+    &__container
+      &--course  
+        margin: 0 auto  
++r(960)      
+  .contact
+    &__container
+      &--course 
+        padding-left: 0
+        padding-right: 0    

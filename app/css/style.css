@@ -643,6 +643,11 @@ a:hover, a:focus {
   text-transform: uppercase;
 }
 
+.button--white {
+  color: #171718;
+  background-color: #fff;
+}
+
 .button__text {
   display: inline-block;
   position: relative;
@@ -679,7 +684,7 @@ a:hover, a:focus {
     font: 700 italic 40px/56px "HelveticaNeueCyr", sans-serif;
   }
   .button {
-    letter-spacing: 7px;
+    letter-spacing: 6px;
     padding: 17px 60px 15px 38px;
   }
 }
@@ -897,6 +902,11 @@ a:hover, a:focus {
   width: 100%;
   top: 10px;
   right: 0;
+}
+
+.intro__photo {
+  position: relative;
+  z-index: 30;
 }
 
 .intro__img {
@@ -2260,7 +2270,7 @@ a:hover, a:focus {
     font: 400 20px/35px "HelveticaNeueCyr", sans-serif;
   }
   .contact__social {
-    font: 400 20px/44px "HelveticaNeueCyr", sans-serif;
+    font: 400 16px/44px "HelveticaNeueCyr", sans-serif;
   }
   .form-group {
     margin-bottom: 35px;
@@ -2273,6 +2283,9 @@ a:hover, a:focus {
 @media only screen and (min-width: 1200px) {
   .contact__col--2, .contact__col--3, .contact__col--4 {
     text-align: center;
+  }
+  .contact__social {
+    font: 400 20px/44px "HelveticaNeueCyr", sans-serif;
   }
   #map {
     height: 400px;
@@ -2427,7 +2440,7 @@ a:hover, a:focus {
   font: 400 15px/20px "HelveticaNeueCyr", sans-serif;
   color: #fff;
   opacity: 0.3;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   padding-top: 20px;
 }
 
@@ -2516,5 +2529,184 @@ a:hover, a:focus {
   }
   .modal__body {
     padding: 100px 200px;
+  }
+}
+
+/* ---------------------------------------- */
+/* C O U R S E    P A G E    S T Y L E      */
+/* ---------------------------------------- */
+.wrapper--course {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#beecfb), to(#f7b8cd));
+  background-image: -webkit-linear-gradient(bottom, #beecfb 0%, #f7b8cd 100%);
+  background-image: linear-gradient(to top, #beecfb 0%, #f7b8cd 100%);
+}
+
+.wrapper--course .intro {
+  padding-top: 82px;
+}
+
+.wrapper--course .intro__heading {
+  margin-bottom: 42px;
+  letter-spacing: 2px;
+  font: 900 italic 36px/50px "HelveticaNeueCyr", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  position: relative;
+  z-index: 35;
+  text-align: center;
+}
+
+.wrapper--course .intro__heading--white {
+  color: #fff;
+}
+
+.wrapper--course .logo__image {
+  margin-bottom: 40px;
+}
+
+.intro--course {
+  margin-bottom: -170px;
+  padding-bottom: 302px;
+}
+
+.intro__photo {
+  display: inline-block;
+  opacity: 0.3;
+}
+
+.intro__btn-group .button {
+  width: 290px;
+  position: relative;
+  z-index: 35;
+}
+
+.intro__btn-group .button:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 760px) {
+  .wrapper--course .intro__heading {
+    font: 900 italic 40px/60px "HelveticaNeueCyr", sans-serif;
+    text-align: left;
+  }
+  .wrapper--course .intro__btn {
+    margin-right: 105px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .wrapper--course .intro__heading {
+    font: 900 italic 50px/80px "HelveticaNeueCyr", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .wrapper--course .intro__heading {
+    font: 900 italic 60px/90px "HelveticaNeueCyr", sans-serif;
+  }
+}
+
+.course__details--margin {
+  margin-bottom: 78px;
+}
+
+.description {
+  margin-bottom: 262px;
+}
+
+.description__panel {
+  position: relative;
+  z-index: 35;
+}
+
+.description__tab {
+  text-align: center;
+  background-color: #000;
+  width: 50%;
+}
+
+.description__tab a {
+  color: #fff;
+  font: 700 italic 14px/25px "HelveticaNeueCyr", sans-serif;
+  text-transform: uppercase;
+  padding: 16px 0;
+}
+
+.tab-content {
+  min-height: 500px;
+  padding-top: 80px;
+}
+
+.tab__heading {
+  font: 700 italic 24px/40px "HelveticaNeueCyr", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  padding-top: 15px;
+}
+
+.tab__text {
+  font: 500 16px/24px "HelveticaNeueCyr", sans-serif;
+  color: #000;
+  text-align: justify;
+}
+
+.tab__video iframe {
+  height: 310px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 760px) {
+  .tab__heading {
+    font: 700 italic 30px/56px "HelveticaNeueCyr", sans-serif;
+  }
+  .tab__text {
+    font: 500 20px/35px "HelveticaNeueCyr", sans-serif;
+  }
+  .description__tab {
+    width: 25%;
+  }
+  .description__tab a {
+    min-height: auto;
+    line-height: auto;
+    letter-spacing: 4px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .description__tab a {
+    letter-spacing: 6px;
+  }
+}
+
+.entry {
+  margin-bottom: 180px;
+}
+
+.entry__body {
+  background-color: #000;
+  padding-top: 115px;
+  margin: 0 -15px;
+}
+
+.contact__container--course {
+  margin: 0 -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media only screen and (min-width: 760px) {
+  .entry__body {
+    margin: 0 auto;
+  }
+  .contact__container--course {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .contact__container--course {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

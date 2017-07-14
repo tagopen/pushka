@@ -1,0 +1,65 @@
+.contact
+  .container
+    .contact__container.contact__container--course
+      .contact__bg
+      .row
+        .col-xs-12.col-sm-6.col-md-3.col-md-offset-1
+          .contact__heading!=content.index.contact.heading
+          .contact__group
+            .contact__number
+              a.contact__link(href=content.index.contact.number1.href)!=content.index.contact.number1.text
+            .contact__number  
+              a.contact__link(href=content.index.contact.number2.href)!=content.index.contact.number2.text 
+          .contact__group
+            .contact__mail
+              a.contact__link(href=content.index.contact.mail.href)!=content.index.contact.mail.text  
+          .contact__group
+            .contact__link!=content.index.contact.address   
+        .col-xs-12.col-sm-6.col-md-6.col-md-offset-1
+          .contact__box
+            .row
+              .col-xs-6.col-md-3.contact__col
+                a.contact__social(href=content.index.contact.mail.href)!=content.index.contact.socials.link1.text
+              .col-xs-6.col-md-3.contact__col.contact__col--2
+                a.contact__social(href=content.index.contact.mail.href)!=content.index.contact.socials.link2.text
+              .col-xs-6.col-md-3.contact__col.contact__col--3
+                a.contact__social(href=content.index.contact.mail.href)!=content.index.contact.socials.link3.text
+              .col-xs-6.col-md-3.contact__col.contact__col--4
+                a.contact__social(href=content.index.contact.mail.href)!=content.index.contact.socials.link4.text   
+          form.contact__form.contactForm(method='post', action='./mail/mail.php')
+            .row
+              .form-group.col-xs-12.col-md-6
+                .input__heading ВАШИ ИМЯ И ФАМИЛИЯ
+                input.form-control.form__input.form__name(aria-invalid='false', placeholder='ВАШЕ ИМЯ', required, name='name', type='text')    
+              .form-group.col-xs-12.col-md-6
+                .input__heading ВАШ E-MAIL
+                input.form-control.form__input.form__name(aria-invalid='false', placeholder='ВАШ E-MAIL', required, name='email', type='email') 
+              .form-group.col-xs-12
+                .input__heading ВАШЕ СООБЩЕНИЕ
+                textarea.form-control.form__input.form__message(type='text', rows='4', placeholder='ВАШЕ СООБЩЕНИЕ', name='message')
+              .col-xs-12    
+                .form__press
+                  button.button.form__btn(name='form[контакты]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...")
+                    .button__text
+                      | Отправить
+                      span.button__bord —  
+      .row           
+        .col-xs-12.col-md-10.col-md-offset-1
+          #map
+            script.
+              function initMap() {
+              var uluru = {lat: 50.446137, lng: 30.518215};
+              var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 17,
+              mapTypeControl: false,
+              scrollwheel: false,
+              streetViewControl: false,
+              center: uluru
+                });
+                var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+                  });
+                  }
+            script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDMiE1FSNLDqeWHjoHH6cZBlhl6NITkw2w&callback=initMap')
+

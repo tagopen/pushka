@@ -1,0 +1,31 @@
+.intro.intro--course
+  .intro__image.text-center  
+    img.img-responsive.intro__photo(src='img/introb.png')
+    .intro__line.intro__line--1.hidden-xs  
+      img(src='img/line.svg' alt='logo')
+    .intro__line.intro__line--2.hidden-xs  
+      img(src='img/line.svg' alt='logo')
+    .intro__line.intro__line--3.hidden-xs  
+      img(src='img/line.svg' alt='logo')
+  .intro__bg  
+  .container
+    .row
+      .col-xs-12.col-sm-4.col-md-3.col-lg-2
+        .logo
+          a.logo__image(href="#")
+            img.img-responsive.logo__img(src='img/logo/logo.svg' alt='logo')
+    .row          
+      .col-xs-12.col-md-7
+        .intro__heading!=content.course.intro.heading     
+        .course__details.course__details--margin
+          .course__elem!=content.index.courses.details.detail1
+          .course__elem!=content.index.courses.details.detail2
+          .course__elem!=content.index.courses.details.detail3
+          .course__elem!=content.index.courses.details.detail4 
+        .intro__btn-group   
+          a.button.intro__btn(href="#entry")
+            .button__text!=content.course.intro.buttons.btn1  
+              span.button__bord — 
+          a.button.button--white(href="#description")
+            .button__text!=content.course.intro.buttons.btn2  
+              span.button__bord —        
