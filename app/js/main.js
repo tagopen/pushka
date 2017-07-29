@@ -98,47 +98,6 @@ $(function() {
   });
 });
 
-// Validation
-$(function() {
-  $('.contactForm--modal').on('submit', function(e) {
-    var $form = $(this),
-        $email = $form.find('[name=email]'),
-        $phone = $form.find('[name=phone]'),
-        $animateElement = $form.find('.modal__group'),
-        animateElementReplace = $form.find('.contactForm--success');
-
-    if ($email.val() === '' &&  $phone.val() === '') {
-      alert('Please enter either your phone or your email');
-      return false; /* cancel submit */
-    }
-
-    $animateElement.animate({
-                    left: '-100%',
-                    opacity: '0'
-                  }, 
-                  { 
-                    duration: 1200, 
-                    queue: false, 
-                    complete: function(){
-                      $(this).remove();
-                    }
-                  })
-                  .animateElementReplace.animate({
-                    left: '0',
-                    opacity: '1'
-                  }, 
-                  { 
-                    duration: 1200, 
-                    queue: false,
-                    start: function(){
-                      $(this).show();
-                    }
-                  });
-
-    e.preventDefault();
-  });
-});
-
 $(function() {
   var windowHeight = $(window).outerHeight(),
       documentHeight = $('.intro').innerHeight(),
@@ -361,7 +320,6 @@ $(function() {
 
 /*var player, iframe;
 var $ = document.querySelector.bind(document);
-
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     videoId: 'Rr8ljRgcJNM',
@@ -382,7 +340,6 @@ function onYouTubeIframeAPIReady() {
     }
   });
 }
-
 function onPlayerReady(event) {
   var player = event.target;
   iframe = $('#player');
@@ -390,11 +347,9 @@ function onPlayerReady(event) {
   player.playVideo();
   player.setVolume(0);
 }
-
 function setupListener (){
 $('#purpose__play').addEventListener('click', playFullscreen);
 }
-
 function playFullscreen (){
   player.playVideo();//won't work on mobile
   player.setVolume(100);
